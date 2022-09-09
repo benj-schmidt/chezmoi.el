@@ -298,7 +298,7 @@ Prefix ARG is passed to `chezmoi-write'."
              files))
          current-prefix-arg))
   (let (file)
-    (while (and (setq file (completing-read "Select file to sync." " (C-g to stop): "
+    (while (and (setq file (completing-read "Select file to sync. (C-g to stop): "
                                             files))
                 (chezmoi-write file arg))
       (setq files (remove file files)))))
